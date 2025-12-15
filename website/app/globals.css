@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Wireframe/Sketchy Theme Design System
+Minimalist black, white, and gray palette with hand-drawn aesthetics
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Core wireframe palette */
+    --background: 0 0% 100%; /* Pure white */
+    --foreground: 0 0% 0%; /* Pure black */
+
+    /* Card system */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    /* Popover system */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    /* Primary - Pure black for main elements */
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light gray for subtle backgrounds */
+    --secondary: 0 0% 97%;
+    --secondary-foreground: 0 0% 15%;
+
+    /* Muted - Medium gray for supporting content */
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 40%;
+
+    /* Accent - Dark gray for highlights */
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Sketchy accent - For handwritten elements */
+    --sketch: 0 0% 25%;
+    --sketch-foreground: 0 0% 100%;
+
+    /* States */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders - Light gray for wireframe aesthetic */
+    --border: 0 0% 85%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 0%;
+
+    --radius: 0.25rem; /* Sharper corners for wireframe feel */
+
+    /* Custom wireframe tokens */
+    --wireframe-light: 0 0% 92%;
+    --wireframe-medium: 0 0% 65%;
+    --wireframe-dark: 0 0% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Typography System */
+  .font-body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  .font-sketch {
+    font-family: 'Kalam', cursive;
+    font-weight: 400;
+  }
+  
+  .font-sketch-bold {
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+  }
+  
+  /* Wireframe-specific utilities */
+  .sketch-border {
+    border: 2px solid hsl(var(--border));
+    border-radius: 0;
+    position: relative;
+  }
+  
+  .sketch-underline {
+    position: relative;
+  }
+  
+  .sketch-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: hsl(var(--accent));
+    transform: rotate(-0.5deg);
+  }
+}
+
+/* Custom scrollbar - Minimal wireframe style */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--accent));
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--foreground));
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Code blocks */
+pre {
+  @apply rounded-lg p-4 overflow-x-auto;
+}
+
+code {
+  @apply font-mono text-sm;
+}
