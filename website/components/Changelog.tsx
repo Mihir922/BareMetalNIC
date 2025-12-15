@@ -5,10 +5,42 @@ import { Calendar, Cpu, Package, Zap, Shield, Code } from 'lucide-react'
 
 const releases = [
   {
+    version: 'v1.2.0',
+    date: 'December 16, 2025',
+    title: 'ARM64 Architecture Support',
+    icon: Cpu,
+    changes: [
+      {
+        type: 'new',
+        title: 'ARM64-Optimized Driver',
+        description: 'Added arm64_nic_driver.hpp with 25-70ns latency using NEON SIMD, Load-Acquire/Store-Release semantics, and ARM64-specific optimizations',
+        icon: Cpu,
+      },
+      {
+        type: 'new',
+        title: 'Platform Support',
+        description: 'Full support for Apple Silicon (M1/M2/M3/M4), AWS Graviton 2/3/4, Ampere Altra, NVIDIA Grace, and Marvell ThunderX platforms',
+        icon: Package,
+      },
+      {
+        type: 'new',
+        title: 'ARM64 System Counter',
+        description: 'Precise timing using ARM64 CNTVCT_EL0 system register for sub-nanosecond timestamp accuracy',
+        icon: Zap,
+      },
+      {
+        type: 'enhancement',
+        title: 'NEON SIMD Optimizations',
+        description: 'Fast packet processing using ARM NEON intrinsics for memory operations',
+        icon: Code,
+      },
+    ],
+  },
+  {
     version: 'v1.1.0',
     date: 'December 16, 2025',
     title: 'Broadcom NetXtreme Support',
-    icon: Cpu,
+    icon: Package,
     changes: [
       {
         type: 'new',

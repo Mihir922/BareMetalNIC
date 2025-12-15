@@ -17,7 +17,7 @@ const features = [
   {
     icon: Code2,
     title: 'Header-Only Library',
-    description: 'Five production drivers included: custom_nic_driver.hpp (fastest), broadcom_netxtreme.hpp (BCM575xx/588xx), hardware_bridge.hpp (portable), kernel_bypass_nic.hpp (secure), solarflare_efvi.hpp (vendor).',
+    description: 'Six production drivers: custom_nic_driver.hpp (x86_64, fastest), arm64_nic_driver.hpp (ARM64/NEON), broadcom_netxtreme.hpp (BCM575xx/588xx), hardware_bridge.hpp (portable), kernel_bypass_nic.hpp (secure), solarflare_efvi.hpp (vendor).',
   },
   {
     icon: Cpu,

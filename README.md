@@ -113,6 +113,7 @@ export CPLUS_INCLUDE_PATH=$PWD/include:$CPLUS_INCLUDE_PATH
 **Production Drivers (Recommended):**
 ```cpp
 #include <ull_nic/custom_nic_driver.hpp>    // 20-50ns latency, direct MMIO
+#include <ull_nic/arm64_nic_driver.hpp>      // ARM64-optimized (25-70ns, NEON SIMD)
 #include <ull_nic/hardware_bridge.hpp>       // Hardware abstraction layer
 #include <ull_nic/kernel_bypass_nic.hpp>     // VFIO/IOMMU kernel bypass
 #include <ull_nic/broadcom_netxtreme.hpp>    // Broadcom BCM575xx/588xx (30-80ns)
@@ -172,7 +173,7 @@ g++ -std=c++17 -O3 -march=native -flto \
 
 2. **System Requirements:**
    - Linux kernel 4.18+ (for VFIO support)
-   - x86_64 architecture (ARM64 experimental)
+   - x86_64 or ARM64 (aarch64) architecture
    - Root access for initial setup (not required at runtime)
 
 ### Setup Script
@@ -222,6 +223,7 @@ This repository includes **production-ready** driver implementations:
 | File | Description | Latency | Use Case |
 |------|-------------|---------|----------|
 | **`custom_nic_driver.hpp`** | Zero-abstraction memory-mapped NIC driver | **20-50ns** | HFT, ultra-low latency applications |
+| **`arm64_nic_driver.hpp`** | ARM64-optimized driver with NEON SIMD | **25-70ns** | Apple Silicon, AWS Graviton, Ampere Altra |
 | **`hardware_bridge.hpp`** | Hardware abstraction layer for multi-NIC support | **30-60ns** | Generic applications across NICs |
 | **`broadcom_netxtreme.hpp`** | Broadcom NetXtreme BCM575xx/588xx driver | **30-80ns** | Broadcom NIC deployments |
 | **`kernel_bypass_nic.hpp`** | VFIO/IOMMU kernel bypass framework | **40-70ns** | Secure userspace NIC access |
@@ -434,8 +436,8 @@ Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 
 - [x] Intel X710 / Mellanox ConnectX-6 support
 - [x] Solarflare ef_vi wrapper
-- [ ] Broadcom NetXtreme support
-- [ ] ARM64 architecture support
+- [x] Broadcom NetXtreme support
+- [x] ARM64 architecture support
 - [ ] Multi-queue RSS support
 - [ ] Hardware timestamping API
 - [ ] SR-IOV virtual function support
